@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-                         TRKolodaView is a class designed to simplify the implementation of Tinder like cards on iOS
+                         TRKolodaView is a class designed to simplify the implementation of Tinder like cards on iOS.This is very good sdk.
                        DESC
 
   s.homepage         = 'https://github.com/TrumpRothschild/TRKoloda'
@@ -28,10 +28,11 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'git@github.com:TrumpRothschild/TRKoloda.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/DonaldJoseph143'
 
-  #s.ios.deployment_target = '10.0'
+  
   s.platform     = :ios, '8.0'
   s.source_files = 'TRKoloda/Classes/**/*'
-  
+  s.swift_versions = '4.0'
+  s.ios.deployment_target = '11.0'
   # s.resource_bundles = {
   #   'TRKoloda' => ['TRKoloda/Assets/*.png']
   # }
