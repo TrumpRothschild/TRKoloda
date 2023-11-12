@@ -1,8 +1,8 @@
 //
-//  TRKolodaViewAnimatior.swift
-//  TRKoloda
+//  KolodaViewAnimatior.swift
+//  Koloda
 //
-//  Created by TrumpRothschild Andreyev on 3/30/16.
+//  Created by Eugene Andreyev on 3/30/16.
 //
 //
 
@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import pop
 
-open class TRKolodaViewAnimatior {
+open class KolodaViewAnimator {
     
     public typealias AnimationCompletionBlock = ((Bool) -> Void)?
     

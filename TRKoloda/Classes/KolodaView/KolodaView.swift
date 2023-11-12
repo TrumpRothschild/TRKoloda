@@ -1,9 +1,9 @@
 //
-//  TRKolodaView.swift
-//  TRKoloda
+//  KolodaView.swift
+//  Koloda
 //
-//  Created by TrumpRothschild on 4/24/15.
-//  Copyright (c) 2015 TrumpRothschild. All rights reserved.
+//  Created by Eugene Andreyev on 4/24/15.
+//  Copyright (c) 2015 Eugene Andreyev. All rights reserved.
 //
 
 import UIKit
@@ -24,10 +24,10 @@ private let defaultAlphaValueSemiTransparent: CGFloat = 0.7
 
 public protocol KolodaViewDataSource: class {
     
-    func kolodaNumberOfCards(_ koloda: TRKolodaView) -> Int
-    func kolodaSpeedThatCardShouldDrag(_ koloda: TRKolodaView) -> DragSpeed
-    func koloda(_ koloda: TRKolodaView, viewForCardAt index: Int) -> UIView
-    func koloda(_ koloda: TRKolodaView, viewForCardOverlayAt index: Int) -> OverlayView?
+    func kolodaNumberOfCards(_ koloda: KolodaView) -> Int
+    func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed
+    func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView
+    func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView?
 }
 
 public extension KolodaViewDataSource {
@@ -40,41 +40,41 @@ public extension KolodaViewDataSource {
 
 public protocol KolodaViewDelegate: class {
     
-    func koloda(_ koloda: TRKolodaView, allowedDirectionsForIndex index: Int) -> [SwipeResultDirection]
-    func koloda(_ koloda: TRKolodaView, shouldSwipeCardAt index: Int, in direction: SwipeResultDirection) -> Bool
-    func koloda(_ koloda: TRKolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection)
-    func kolodaDidRunOutOfCards(_ koloda: TRKolodaView)
-    func koloda(_ koloda: TRKolodaView, didSelectCardAt index: Int)
-    func kolodaShouldApplyAppearAnimation(_ koloda: TRKolodaView) -> Bool
-    func kolodaShouldMoveBackgroundCard(_ koloda: TRKolodaView) -> Bool
-    func kolodaShouldTransparentizeNextCard(_ koloda: TRKolodaView) -> Bool
-    func koloda(_ koloda: TRKolodaView, draggedCardWithPercentage finishPercentage: CGFloat, in direction: SwipeResultDirection)
-    func kolodaDidResetCard(_ koloda: TRKolodaView)
-    func kolodaSwipeThresholdRatioMargin(_ koloda: TRKolodaView) -> CGFloat?
-    func koloda(_ koloda: TRKolodaView, didShowCardAt index: Int)
-    func koloda(_ koloda: TRKolodaView, shouldDragCardAt index: Int ) -> Bool
+    func koloda(_ koloda: KolodaView, allowedDirectionsForIndex index: Int) -> [SwipeResultDirection]
+    func koloda(_ koloda: KolodaView, shouldSwipeCardAt index: Int, in direction: SwipeResultDirection) -> Bool
+    func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection)
+    func kolodaDidRunOutOfCards(_ koloda: KolodaView)
+    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int)
+    func kolodaShouldApplyAppearAnimation(_ koloda: KolodaView) -> Bool
+    func kolodaShouldMoveBackgroundCard(_ koloda: KolodaView) -> Bool
+    func kolodaShouldTransparentizeNextCard(_ koloda: KolodaView) -> Bool
+    func koloda(_ koloda: KolodaView, draggedCardWithPercentage finishPercentage: CGFloat, in direction: SwipeResultDirection)
+    func kolodaDidResetCard(_ koloda: KolodaView)
+    func kolodaSwipeThresholdRatioMargin(_ koloda: KolodaView) -> CGFloat?
+    func koloda(_ koloda: KolodaView, didShowCardAt index: Int)
+    func koloda(_ koloda: KolodaView, shouldDragCardAt index: Int ) -> Bool
     
 }
 
 public extension KolodaViewDelegate {
     
-    func koloda(_ koloda: TRKolodaView, shouldSwipeCardAt index: Int, in direction: SwipeResultDirection) -> Bool { return true }
-    func koloda(_ koloda: TRKolodaView, allowedDirectionsForIndex index: Int) -> [SwipeResultDirection] { return [.left, .right] }
-    func koloda(_ koloda: TRKolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {}
-    func kolodaDidRunOutOfCards(_ koloda: TRKolodaView) {}
-    func koloda(_ koloda: TRKolodaView, didSelectCardAt index: Int) {}
-    func kolodaShouldApplyAppearAnimation(_ koloda: TRKolodaView) -> Bool { return true }
-    func kolodaShouldMoveBackgroundCard(_ koloda: TRKolodaView) -> Bool { return true }
-    func kolodaShouldTransparentizeNextCard(_ koloda: TRKolodaView) -> Bool { return true }
-    func koloda(_ koloda: TRKolodaView, draggedCardWithPercentage finishPercentage: CGFloat, in direction: SwipeResultDirection) {}
-    func kolodaDidResetCard(_ koloda: TRKolodaView) {}
-    func kolodaSwipeThresholdRatioMargin(_ koloda: TRKolodaView) -> CGFloat? { return nil}
-    func koloda(_ koloda: TRKolodaView, didShowCardAt index: Int) {}
-    func koloda(_ koloda: TRKolodaView, shouldDragCardAt index: Int ) -> Bool { return true }
+    func koloda(_ koloda: KolodaView, shouldSwipeCardAt index: Int, in direction: SwipeResultDirection) -> Bool { return true }
+    func koloda(_ koloda: KolodaView, allowedDirectionsForIndex index: Int) -> [SwipeResultDirection] { return [.left, .right] }
+    func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {}
+    func kolodaDidRunOutOfCards(_ koloda: KolodaView) {}
+    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {}
+    func kolodaShouldApplyAppearAnimation(_ koloda: KolodaView) -> Bool { return true }
+    func kolodaShouldMoveBackgroundCard(_ koloda: KolodaView) -> Bool { return true }
+    func kolodaShouldTransparentizeNextCard(_ koloda: KolodaView) -> Bool { return true }
+    func koloda(_ koloda: KolodaView, draggedCardWithPercentage finishPercentage: CGFloat, in direction: SwipeResultDirection) {}
+    func kolodaDidResetCard(_ koloda: KolodaView) {}
+    func kolodaSwipeThresholdRatioMargin(_ koloda: KolodaView) -> CGFloat? { return nil}
+    func koloda(_ koloda: KolodaView, didShowCardAt index: Int) {}
+    func koloda(_ koloda: KolodaView, shouldDragCardAt index: Int ) -> Bool { return true }
     
 }
 
-open class TRKolodaView: UIView, DraggableCardDelegate {
+open class KolodaView: UIView, DraggableCardDelegate {
 
     //Opacity values
     public var alphaValueOpaque = defaultAlphaValueOpaque

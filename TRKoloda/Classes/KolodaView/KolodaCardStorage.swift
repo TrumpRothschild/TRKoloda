@@ -1,15 +1,15 @@
 //
-//  TRKolodaCardStorage.swift
+//  KolodaCardStorage.swift
 //  Pods
 //
-//  Created by TrumpRothschild on 3/30/16.
+//  Created by Eugene Andreyev on 3/30/16.
 //
 //
 
 import Foundation
 import UIKit
 
-extension TRKolodaView {
+extension KolodaView {
     
     func createCard(at index: Int, frame: CGRect? = nil) -> DraggableCardView {
         let cardView = generateCard(frame ?? frameForTopCard())
