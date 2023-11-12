@@ -1,9 +1,9 @@
 //
-//  TRDraggableCardView.swift
-//  TRKoloda
+//  DraggableCardView.swift
+//  Koloda
 //
-//  Created by TrumpRothschild Andreyev on 4/23/15.
-//  Copyright (c) 2015 TrumpRothschild. All rights reserved.
+//  Created by Eugene Andreyev on 4/23/15.
+//  Copyright (c) 2015 Yalantis. All rights reserved.
 //
 
 import UIKit
@@ -43,7 +43,7 @@ private let cardResetAnimationKey = "resetPositionAnimation"
 private let cardResetAnimationDuration: TimeInterval = 0.2
 internal var cardSwipeActionAnimationDuration: TimeInterval = DragSpeed.default.rawValue
 
-public class TRDraggableCardView: UIView, UIGestureRecognizerDelegate {
+public class DraggableCardView: UIView, UIGestureRecognizerDelegate {
 
     //Drag animation constants
     public var rotationMax = defaultRotationMax

@@ -15,8 +15,10 @@ PODS:
   - Nimble-Snapshots/Core (9.4.0):
     - iOSSnapshotTestCase (~> 8.0)
     - Nimble
+  - pop (1.0.12)
   - Quick (2.2.1)
-  - TRKoloda (0.1.0)
+  - TRKoloda (0.1.0):
+    - pop (~> 1.0)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -31,6 +33,7 @@ SPEC REPOS:
     - iOSSnapshotTestCase
     - Nimble
     - Nimble-Snapshots
+    - pop
     - Quick
 
 EXTERNAL SOURCES:
@@ -42,8 +45,9 @@ SPEC CHECKSUMS:
   iOSSnapshotTestCase: a670511f9ee3829c2b9c23e6e68f315fd7b6790f
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   Nimble-Snapshots: ef281b908c604f78c8313587e25ea92c8ab513d7
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
-  TRKoloda: 1d84fe9f77930bc9e06aed42992bf9be9afb0549
+  TRKoloda: 0c19e9b95a0a33ed05a231f6bbd17799b118516e
 
 PODFILE CHECKSUM: cde361d9ddfd4098393e4d9687205f3d62a083a3
 

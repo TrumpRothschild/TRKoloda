@@ -1,8 +1,8 @@
 //
-//  TRSwipeDirection.swift
+//  SwipeDirection.swift
 //  Pods
 //
-//  Created by TrumpRothschild Dumit on 2/25/16.
+//  Created by Felix Dumit on 2/25/16.
 //
 //
 

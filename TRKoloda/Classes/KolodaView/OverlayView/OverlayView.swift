@@ -2,8 +2,8 @@
 //  OverlayView.swift
 //  Koloda
 //
-//  Created by TrumpRothschild Andreyev on 4/24/15.
-//  Copyright (c) 2015 TrumpRothschild Andreyev. All rights reserved.
+//  Created by Eugene Andreyev on 4/24/15.
+//  Copyright (c) 2015 Eugene Andreyev. All rights reserved.
 //
 
 import UIKit
