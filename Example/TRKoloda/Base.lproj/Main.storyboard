@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="F2a-v5-crG">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Background Animation View Controller-->
+        <scene sceneID="yuS-2v-UfD">
+            <objects>
+                <viewController id="F2a-v5-crG" customClass="BackgroundAnimationViewController" customModule="Koloda_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1sj-BK-GhZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="CDW-0B-bNB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m3m-wR-wAP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhw-6k-pLQ" customClass="CustomKolodaView" customModule="Koloda_Example" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="74" width="320" height="494"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5y-Ey-Xxa">
+                                <rect key="frame" x="76" y="504" width="34" height="34"/>
+                                <state key="normal" image="ic_skip">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftButtonTapped" destination="F2a-v5-crG" eventType="touchUpInside" id="7LZ-NZ-U4N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPc-W6-tF7">
+                                <rect key="frame" x="211" y="505" width="38" height="34"/>
+                                <state key="normal" image="ic_like">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightButtonTapped" destination="F2a-v5-crG" eventType="touchUpInside" id="tUg-vG-BIN"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fHj-PZ-xLI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgz-6f-dLG">
+                                        <rect key="frame" x="15" y="40" width="21" height="22"/>
+                                        <state key="normal" image="ic_koloda">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="4xk-nN-m6N" kind="presentation" id="OVT-hT-6oW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFq-Cq-oKQ">
+                                        <rect key="frame" x="284" y="40" width="21" height="22"/>
+                                        <state key="normal" image="ic_undo">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="undoButtonTapped" destination="F2a-v5-crG" eventType="touchUpInside" id="0ru-nd-Zjc"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New in Gallery" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bN9-Vz-21B">
+                                        <rect key="frame" x="105" y="39" width="112" height="22"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.75050950049999998" green="0.17824108899999999" blue="0.21366685630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bN9-Vz-21B" secondAttribute="bottom" constant="14" id="7IE-yH-Aid"/>
+                                    <constraint firstItem="jgz-6f-dLG" firstAttribute="leading" secondItem="fHj-PZ-xLI" secondAttribute="leading" constant="15" id="QKg-4k-d3m"/>
+                                    <constraint firstAttribute="bottom" secondItem="dFq-Cq-oKQ" secondAttribute="bottom" constant="12" id="TMH-xk-Uds"/>
+                                    <constraint firstAttribute="centerX" secondItem="bN9-Vz-21B" secondAttribute="centerX" id="UYd-vr-Q5y"/>
+                                    <constraint firstAttribute="bottom" secondItem="jgz-6f-dLG" secondAttribute="bottom" constant="12" id="WPd-Ax-KO6"/>
+                                    <constraint firstAttribute="height" constant="74" id="lip-ZO-reT"/>
+                                    <constraint firstAttribute="trailing" secondItem="dFq-Cq-oKQ" secondAttribute="trailing" constant="15" id="tSY-AL-xaR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cYX-Dv-88Z">
+                                <rect key="frame" x="160" y="504" width="1" height="34"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="EoV-Qc-jSi"/>
+                                    <constraint firstAttribute="height" constant="34" id="ZpU-t3-S4D"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94260978699999998" green="0.074026077989999994" blue="0.15428309139999999" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fHj-PZ-xLI" firstAttribute="leading" secondItem="m3m-wR-wAP" secondAttribute="leading" id="20I-0n-8SJ"/>
+                            <constraint firstItem="cYX-Dv-88Z" firstAttribute="leading" secondItem="D5y-Ey-Xxa" secondAttribute="trailing" constant="50" id="4i8-uC-fAc"/>
+                            <constraint firstItem="cYX-Dv-88Z" firstAttribute="top" secondItem="D5y-Ey-Xxa" secondAttribute="top" id="7GE-O0-io8"/>
+                            <constraint firstItem="qhw-6k-pLQ" firstAttribute="top" secondItem="1sj-BK-GhZ" secondAttribute="bottom" constant="64" id="7OC-za-CUy"/>
+                            <constraint firstAttribute="trailing" secondItem="fHj-PZ-xLI" secondAttribute="trailing" id="FPo-xg-V6U"/>
+                            <constraint firstItem="CPc-W6-tF7" firstAttribute="top" secondItem="cYX-Dv-88Z" secondAttribute="top" constant="1" id="Je0-K1-Gop"/>
+                            <constraint firstItem="CDW-0B-bNB" firstAttribute="top" secondItem="cYX-Dv-88Z" secondAttribute="bottom" constant="30" id="SkG-lI-kdl"/>
+                            <constraint firstAttribute="bottom" secondItem="qhw-6k-pLQ" secondAttribute="bottom" id="lMG-hr-beC"/>
+                            <constraint firstAttribute="trailing" secondItem="qhw-6k-pLQ" secondAttribute="trailing" id="lRE-Mf-C34"/>
+                            <constraint firstItem="fHj-PZ-xLI" firstAttribute="top" secondItem="m3m-wR-wAP" secondAttribute="top" id="pqT-oX-HpT"/>
+                            <constraint firstAttribute="centerX" secondItem="cYX-Dv-88Z" secondAttribute="centerX" id="qsU-xm-HAs"/>
+                            <constraint firstItem="qhw-6k-pLQ" firstAttribute="top" secondItem="fHj-PZ-xLI" secondAttribute="bottom" id="srs-SR-Msv"/>
+                            <constraint firstItem="CPc-W6-tF7" firstAttribute="leading" secondItem="cYX-Dv-88Z" secondAttribute="trailing" constant="50" id="sy7-QB-XEg"/>
+                            <constraint firstItem="qhw-6k-pLQ" firstAttribute="leading" secondItem="m3m-wR-wAP" secondAttribute="leading" id="yto-VE-3lW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7OC-za-CUy"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="kolodaView" destination="qhw-6k-pLQ" id="fLp-lJ-JOg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JGy-l9-E72" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="901"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XwK-xa-HBq">
+            <objects>
+                <viewController id="4xk-nN-m6N" customClass="ViewController" customModule="Koloda_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F8L-qR-Hmq"/>
+                        <viewControllerLayoutGuide type="bottom" id="JVY-x6-LmK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S1M-9s-l1G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UaP-VG-4xl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpE-o9-hg9">
+                                        <rect key="frame" x="15" y="33" width="19" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="IBt-m7-6Y7"/>
+                                            <constraint firstAttribute="width" constant="19" id="awQ-yC-5mJ"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_card_from_bg">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="F2a-v5-crG" kind="presentation" id="5iX-uc-xnQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOq-nf-qJt">
+                                        <rect key="frame" x="284" y="33" width="21" height="22"/>
+                                        <state key="normal" image="btn_undo">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="undoButtonTapped" destination="4xk-nN-m6N" eventType="touchUpInside" id="tfH-6z-s2f"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="BOq-nf-qJt" secondAttribute="trailing" constant="15" id="B3u-6i-XfX"/>
+                                    <constraint firstItem="TpE-o9-hg9" firstAttribute="leading" secondItem="UaP-VG-4xl" secondAttribute="leading" constant="15" id="RUX-X4-b3B"/>
+                                    <constraint firstItem="TpE-o9-hg9" firstAttribute="top" secondItem="UaP-VG-4xl" secondAttribute="top" constant="33" id="Yyr-ss-Luv"/>
+                                    <constraint firstAttribute="height" constant="64" id="jkK-of-JIy"/>
+                                    <constraint firstItem="BOq-nf-qJt" firstAttribute="top" secondItem="UaP-VG-4xl" secondAttribute="top" constant="33" id="wFq-8m-8sJ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XCy-9v-BAU">
+                                <rect key="frame" x="100" y="408" width="120" height="32"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bh5-f2-NlM">
+                                        <rect key="frame" x="88" y="0.0" width="32" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="btn_like_normal">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted" image="btn_like_pressed"/>
+                                        <connections>
+                                            <action selector="rightButtonTapped" destination="4xk-nN-m6N" eventType="touchUpInside" id="sxc-SA-d0q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="877-mE-gQl">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="btn_skip_normal">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted" image="btn_skip_pressed"/>
+                                        <connections>
+                                            <action selector="leftButtonTapped" destination="4xk-nN-m6N" eventType="touchUpInside" id="tjI-gm-Ka2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Lt2-sT-gBL"/>
+                                    <constraint firstAttribute="width" constant="120" id="YPC-XF-PDB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="moV-sC-yxV" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="18" y="64" width="284" height="320"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="moV-sC-yxV" secondAttribute="height" multiplier="71:80" id="LoX-BU-rB8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13725490200000001" green="0.1529411765" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UaP-VG-4xl" firstAttribute="top" secondItem="S1M-9s-l1G" secondAttribute="top" id="0JU-Hi-Tvm"/>
+                            <constraint firstItem="moV-sC-yxV" firstAttribute="top" secondItem="UaP-VG-4xl" secondAttribute="bottom" id="HRP-cO-FaO"/>
+                            <constraint firstItem="UaP-VG-4xl" firstAttribute="top" secondItem="F8L-qR-Hmq" secondAttribute="bottom" id="LYx-FH-ems"/>
+                            <constraint firstAttribute="centerX" secondItem="XCy-9v-BAU" secondAttribute="centerX" id="OtV-ZX-z56"/>
+                            <constraint firstItem="moV-sC-yxV" firstAttribute="leading" secondItem="S1M-9s-l1G" secondAttribute="leading" constant="18" id="PsO-Ft-ooW"/>
+                            <constraint firstItem="XCy-9v-BAU" firstAttribute="top" secondItem="moV-sC-yxV" secondAttribute="bottom" constant="24" id="cBg-z1-YQa"/>
+                            <constraint firstItem="UaP-VG-4xl" firstAttribute="leading" secondItem="S1M-9s-l1G" secondAttribute="leading" id="kRL-7U-OyY"/>
+                            <constraint firstAttribute="trailing" secondItem="UaP-VG-4xl" secondAttribute="trailing" id="o2g-Sh-eyO"/>
+                            <constraint firstAttribute="trailing" secondItem="moV-sC-yxV" secondAttribute="trailing" constant="18" id="pEE-fg-i3T"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LYx-FH-ems"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="cKq-MD-CID"/>
+                    <connections>
+                        <outlet property="kolodaView" destination="moV-sC-yxV" id="zsY-k6-Vyy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QY2-wQ-g74" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="136"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_like_normal" width="32" height="32"/>
+        <image name="btn_like_pressed" width="32" height="32"/>
+        <image name="btn_skip_normal" width="32" height="32"/>
+        <image name="btn_skip_pressed" width="32" height="32"/>
+        <image name="btn_undo" width="21" height="21"/>
+        <image name="ic_card_from_bg" width="21.5" height="21.5"/>
+        <image name="ic_koloda" width="21.5" height="21.5"/>
+        <image name="ic_like" width="38" height="34"/>
+        <image name="ic_skip" width="34" height="34"/>
+        <image name="ic_undo" width="21.5" height="21.5"/>
+    </resources>
+</document>

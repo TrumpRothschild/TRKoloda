@@ -1,0 +1,6 @@
+framework module TRKoloda {
+  umbrella header "TRKoloda-umbrella.h"
+
+  export *
+  module * { export * }
+}
